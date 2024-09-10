@@ -1,36 +1,56 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+![mySide](https://myside.com.br/public-web/assets/logos/myside-logo.svg)
 
-## Getting Started
+Teste Prático | Software Engineer - Frontend - Next.js
 
-First, run the development server:
+## Pré-requisitos
+
+Antes de começar, certifique-se de ter o seguinte instalado em sua máquina:
+
+- [Node.js](https://nodejs.org/) (versão 14.x ou superior)
+- [npm](https://www.npmjs.com/) ou [Yarn](https://yarnpkg.com/)
+
+## Instalação e Execução Local
+
+Siga os passos abaixo para clonar o repositório, instalar as dependências e executar o projeto localmente:
+
+1. **Clone o repositório:**
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/felipehonoratods/myside-practice-test-frontend.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. **Navegue até o diretório do projeto:**
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+cd myside-practice-test-frontend
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+3. **Instale as dependências:**
 
-## Learn More
+    Se você estiver usando npm:
 
-To learn more about Next.js, take a look at the following resources:
+    ```bash
+    npm install
+    ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+    Ou, se estiver usando Yarn:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+    ```bash
+    yarn install
+    ```
 
-## Deploy on Vercel
+4. **Execute o projeto localmente:**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+    Se estiver usando npm:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+    ```bash
+    npm run dev
+    ```
+
+    Ou, se estiver usando Yarn:
+
+    ```bash
+    yarn dev
+    ```
+
+O servidor de desenvolvimento será iniciado em `http://localhost:3000`. Acesse este endereço no navegador para visualizar o projeto em execução.
