@@ -12,7 +12,7 @@ const list = async () => {
     }
 }
 
-const detail = async (id: number) => {
+const detail = async (id: string) => {
     try {
         const { data } = await api.get<ResponseDetail>(`${url}/${id}`);
         return data.product;
