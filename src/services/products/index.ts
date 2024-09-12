@@ -1,18 +1,18 @@
 import api from "../api";
-import { ResponseDetail, ResponseList } from "./interface";
+import { ResponseDetail, ResponseList, ResponseListCategories } from "./interface";
 
 const url = "/products";
 
 const list = async () => {
     try {
-        const { data } = await api.get<ResponseList>(url);
+        const { data } = await api.get<ResponseList>(url + '?limit=150');
         return data.products;
     } catch (error) {
         return Promise.reject(error);
     }
 }
 
-const detail = async (id: number) => {
+const detail = async (id: string) => {
     try {
         const { data } = await api.get<ResponseDetail>(`${url}/${id}`);
         return data.product;
@@ -21,10 +21,20 @@ const detail = async (id: number) => {
     }
 }
 
+const listCategories = async () => {
+    try {
+        const { data } = await api.get<ResponseListCategories>(`${url}/category`);
+        return data.categories;
+    } catch (error) {
+        return Promise.reject(error);
+    }
+}
+
 
 const productsService = {
     list,
-    detail
+    detail,
+    listCategories
 }
 
 export default productsService;

@@ -20,7 +20,13 @@ export interface ResponseList {
 }
 
 export interface ResponseDetail {
-    status: string;
-    message: string;
-    product: Product;
+  status: string;
+  message: string;
+  product: Product;
+}
+
+export interface ResponseListCategories {
+  status: string;
+  message: string;
+  categories: string[];
 }
