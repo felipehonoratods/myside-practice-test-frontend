@@ -4,7 +4,7 @@ import { Product } from "@/services/products/interface";
 import { truncateText } from "@/shared/utils";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import { FC } from "react";
+import React, { FC } from "react";
 
 export const ProductsCard: FC<{ product: Product }> = ({ product }) => {
     const router = useRouter();

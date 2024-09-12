@@ -1,5 +1,6 @@
 'use client'
 
+import React from 'react';
 import productsService from "@/services/products";
 import { Dispatch, FC, SetStateAction, useEffect, useState } from "react";
 

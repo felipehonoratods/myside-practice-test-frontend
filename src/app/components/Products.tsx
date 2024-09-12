@@ -2,7 +2,7 @@
 
 import productsService from "@/services/products";
 import { Product } from "@/services/products/interface";
-import { FC, useEffect, useState } from "react";
+import React, { FC, useEffect, useState } from "react";
 import { ProductsCard } from "./ProductsCard";
 
 export const Products: FC<{

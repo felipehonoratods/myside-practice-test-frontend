@@ -1,6 +1,6 @@
 import { Product } from "@/services/products/interface";
 import Image from "next/image";
-import { FC } from "react";
+import React, { FC } from "react";
 
 export const ProductDetails: FC<{ product?: Product }> = ({ product }) => {
 
