@@ -6,7 +6,7 @@ Teste Prático | Software Engineer - Frontend - Next.js
 
 Antes de começar, certifique-se de ter o seguinte instalado em sua máquina:
 
-- [Node.js](https://nodejs.org/) (versão 14.x ou superior)
+- [Node.js](https://nodejs.org/) (versão 20.x ou superior)
 - [npm](https://www.npmjs.com/) ou [Yarn](https://yarnpkg.com/)
 
 ## Instalação e Execução Local

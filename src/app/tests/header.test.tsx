@@ -8,7 +8,7 @@ jest.mock('next/navigation', () => ({
 }));
 
 describe('Header', () => {
-    it('renders a heading', () => {
+    it('renders a component', () => {
         (useRouter as jest.Mock).mockReturnValue({
             route: '/',
             pathname: '/',

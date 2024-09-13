@@ -5,7 +5,7 @@ import productsService from "@/services/products";
 import { Product } from "@/services/products/interface";
 import React, { useEffect, useState } from "react";
 
-export default function Home({ params }: { params: { id: string } }) {
+export default function ProductDetailsPage({ params }: { params: { id: string } }) {
     const [product, setProduct] = useState<Product>();
 
     useEffect(() => {
