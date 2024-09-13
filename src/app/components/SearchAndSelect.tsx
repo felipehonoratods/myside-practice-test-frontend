@@ -6,22 +6,13 @@ import { Dispatch, FC, SetStateAction, useEffect, useState } from "react";
 
 export const SearchAndSelect: FC<{
     setSearch: (s: string) => void,
-    setSelectedCategories: Dispatch<SetStateAction<string[]>>,
-    selectedCategories: string[]
-}> = ({ setSearch, setSelectedCategories, selectedCategories }) => {
+    setSelectedCategory: Dispatch<SetStateAction<string>>,
+}> = ({ setSearch, setSelectedCategory }) => {
     const [categories, setcategories] = useState<string[]>([]);
-
-    const handleCategoryChange = (category: string) => {
-        setSelectedCategories((prevCategories: string[]) =>
-            prevCategories.includes(category)
-                ? prevCategories.filter((c) => c !== category)
-                : [...prevCategories, category]
-        );
-    };
 
     useEffect(() => {
         productsService.listCategories().then((categories) => {
-            setcategories(categories);
+            setcategories(['Todos', ...categories]);
         });
     }, []);
 
@@ -57,18 +48,16 @@ export const SearchAndSelect: FC<{
                     </svg>
                 </div>
             </div>
-            <div className="gap-2">
-                {categories.map((category, index) => (
-                    <div key={index}>
-                        <input
-                            type="checkbox"
-                            className="accent-red-500"
-                            checked={selectedCategories.includes(category)}
-                            onChange={() => handleCategoryChange(category)}
-                        />
-                        <span className="font-semibold p-2 capitalize">{category}</span>
-                    </div>
-                ))}
+            <div>
+                <label htmlFor="Category" className="block text-sm font-medium leading-6 text-gray-900">Filtro por categoria:</label>
+                <div className="mt-2 gap-2">
+                    <select onChange={(e) => setSelectedCategory(e.target.value)} id="category" name="category" autoComplete="category-name" className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6">
+                        {categories.map((category, index) => (
+                            <option key={index}>{category}</option>
+                        ))}
+                    </select>
+
+                </div>
             </div>
         </div>
     );
