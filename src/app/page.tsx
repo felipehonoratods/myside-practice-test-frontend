@@ -6,12 +6,12 @@ import { SearchAndSelect } from "./components/SearchAndSelect";
 
 export default function Home() {
   const [search, setSearch] = useState("");
-  const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
+  const [selectedCategory, setSelectedCategory] = useState<string>('Todos');
 
   return (
     <>
-      <SearchAndSelect setSearch={setSearch} selectedCategories={selectedCategories} setSelectedCategories={setSelectedCategories} />
-      <Products search={search} selectedCategories={selectedCategories} />
+      <SearchAndSelect setSearch={setSearch} setSelectedCategory={setSelectedCategory} />
+      <Products search={search} selectedCategory={selectedCategory} />
     </>
   );
 }
