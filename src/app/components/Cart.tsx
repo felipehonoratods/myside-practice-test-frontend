@@ -38,7 +38,7 @@ export const Cart = () => {
                     {cart.map(product => (
                         <tr key={product.id} className="border-t">
                             <td className="border-r">
-                                <div className="flex items-center gap-4 w-[50%]">
+                                <div className="flex items-center gap-4 w-[25%] md:w-[50%] lg:w-[50%]">
                                     <button className="font-2xl text-red-600" onClick={() => removeProduct(product.id)}>
                                         <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
                                             <g id="Circle_Remove">
