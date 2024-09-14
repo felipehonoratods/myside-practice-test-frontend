@@ -17,7 +17,7 @@ export const SearchAndSelect: FC<{
     }, []);
 
     return (
-        <div className="flex justify-around items-center p-2">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 p-2">
             <div>
                 <span className="text-5xl">Produtos</span>
             </div>
@@ -48,7 +48,7 @@ export const SearchAndSelect: FC<{
                     </svg>
                 </div>
             </div>
-            <div>
+            <div className='flex flex-col items-center'>
                 <label htmlFor="Category" className="block text-sm font-medium leading-6 text-gray-900">Filtro por categoria:</label>
                 <div className="mt-2 gap-2">
                     <select onChange={(e) => setSelectedCategory(e.target.value)} id="category" name="category" autoComplete="category-name" className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6">
@@ -56,7 +56,6 @@ export const SearchAndSelect: FC<{
                             <option key={index}>{category}</option>
                         ))}
                     </select>
-
                 </div>
             </div>
         </div>
